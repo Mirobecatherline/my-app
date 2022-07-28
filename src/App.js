@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Cart from "./components/Cart";
 import Feedback from "./components/Feedback";
@@ -12,7 +12,7 @@ function App() {
     <div>
       <h1>hello</h1>
       <NavBar />
-      <Routes>
+      <Switch>
         <Route exact path="/feedback">
           <Feedback/>
         </Route>
@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-      </Routes> 
+      </Switch>
     </div>
   );
 }
