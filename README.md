@@ -11,7 +11,7 @@ The user can view the products in the store, filter the products, and add their 
 
 
 ## Link to live site on GitHub pages
---
+
 https://mirobecatherline.github.io/my-app/
 --
 ## _user story_
