@@ -1,9 +1,12 @@
 //import Cartitem from "./Cartitem";
-import React from "react";
+import React, { useState } from "react";
 //import { useState } from "react";
 
 function Productitem({image,title,category,description,items,handleclick}) {
-    
+    const [read, setRead]=useState(false)
+    function handleclick() {
+        setRead((read)=>read=!read)
+    }
         return (
         <div className="ui card" >
                 <div className="image">
@@ -18,7 +21,7 @@ function Productitem({image,title,category,description,items,handleclick}) {
             {description}
             </div>
             <br/>
-            <button className="positive ui button"  onClick={()=>handleclick(items)}>Add to cart</button>
+            <button className="positive ui button"  onClick={handleclick}> {read ? "Add to cart" : "Remove from cart"}</button>
             </div>
         </div>
                 );
