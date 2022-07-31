@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 //import { useState } from "react";
 
-function Productitem({image,title,category,description,items,handleclick}) {
+function Productitem({image,title,category,description}) {
     const [read, setRead]=useState(false)
     function handleclick() {
         setRead((read)=>read=!read)
