@@ -1,6 +1,4 @@
-//import Cartitem from "./Cartitem";
 import React, { useState } from "react";
-//import { useState } from "react";
 
 function Productitem({image,title,category,description}) {
     const [read, setRead]=useState(false)

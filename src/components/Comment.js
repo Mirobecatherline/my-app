@@ -1,8 +1,8 @@
 import React from "react";
 function Comment(params) {
    
-   function handlesubmit(e) {
-    e.preventDefault();
+   function handleclicks() {
+    alert("Thanks you !")
    }
    
     return(
@@ -11,7 +11,7 @@ function Comment(params) {
     <label>Plese input your comment</label>
     <textarea></textarea>
   </div>
-  <button onSubmit={handlesubmit}>submit</button>
+  <button onclick={handleclicks}>submit</button>
   
 </div>
     )
