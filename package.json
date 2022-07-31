@@ -20,8 +20,8 @@
     "json-server": "^0.15.1"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b main -d build",
     "start": "PORT=8000 react-scripts start",
     "server": "json-server --watch db.json -p 8001",
     "build": "react-scripts build",
