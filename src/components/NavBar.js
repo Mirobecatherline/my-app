@@ -3,7 +3,7 @@ import React from "react";
 
 const linkStyles = {
   display: "inline-block",
-  width: "50px",
+  width: "100px",
   padding: "12px",
   margin: "0 6px 6px",
   background: "blue",
@@ -35,24 +35,14 @@ function NavBar() {
         Product
       </NavLink>
       <NavLink
-        to="/cart"
+        to="/comment"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}
       >
-        Cart
-      </NavLink>
-      <NavLink
-        to="/feedback"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
-      >
-        Feedback
+        comment
       </NavLink>
     </div>
   );

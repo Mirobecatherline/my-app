@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    background: radial-gradient(#fff,rgb(240, 227, 236))
   }
   
   input {
@@ -17,6 +18,7 @@
   
   .App {
     text-align: center;
+    
   }
   
   

@@ -1,8 +1,8 @@
 import React,{ useEffect, useState } from "react";
 
-import Cartitem from "./Cartitem";
+import AdduserproductForm from "./AdduserproductForm";
+//import Cart from "./Cart";
 import Productitem from "./Productitem";
-import Search from "./Search";
 
 function Product() {
   const [products, setProducts]=useState([]);
@@ -13,33 +13,46 @@ function Product() {
     .then(data=>setProducts(data)) 
   },[])
   console.log(products)
-   const [addcart,setaddcart]=useState([])
+ 
+  function onsubmission(trans) {
   
-   function handleclick(items){
-    
-    //addcart.push(items);
-    setaddcart([...addcart,items]);
+    fetch("http://localhost:8001/store",
+        {method:"POST",
+          headers:{"Content-Type": "application/json"},
+          body:JSON.stringify(trans),
+  
+      })
+      .then(r=>r.json())//data is just the trans data we want to add
+      .then(data=>setProducts(currentproduct=>[...currentproduct,data]))//unupdate kwa server ndio inaonekana kwa screen
+      .catch(error=>alert(error))
+  } 
+  
    
-    //console.log(addcart);
-    addcart.map((pro)=>{
-      return ( 
-        //console.log(pro)
-        <Cartitem  key={pro.id}
-        title={pro.title}
-        category={pro.category}
-        description={pro.description}
-        
-       />)
-    })
-    
-    
-   }
+   const [searchInput, setSearchInput] = useState("");
   return(
      <div>
      <h1>This is my product component!</h1>
-     <Search/>
+    
+    <div className="ui large fluid icon input">
+      <input
+        type="text"
+        placeholder="Search for item by category" 
+        onChange={(e)=>setSearchInput(e.target.value)}
+        
+      />
+      <i className="circular search link icon"></i>
+    </div>
+    <AdduserproductForm onsubmission={onsubmission}/>
      <div className="box">
-     {products.map((pro)=>{
+     {products.filter((val)=>{
+      if (searchInput ==="") {
+        return val
+      } 
+      else if (val.category.toLowerCase().includes(searchInput.toLowerCase())){
+        return val
+      }
+      return false;
+    }).map((pro)=>{
         
       return (<Productitem image={pro.image}
         key={pro.id}
@@ -47,7 +60,7 @@ function Product() {
         category={pro.category}
         description={pro.description}
         items={pro}
-        handleclick={handleclick}
+       
       
         />)
         })}
