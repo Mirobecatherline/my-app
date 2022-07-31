@@ -21,7 +21,7 @@ function Productitem({image,title,category,description}) {
             {description}
             </div>
             <br/>
-            <button className="positive ui button"  onClick={handleclick}> {read ? "Add to cart" : "Remove from cart"}</button>
+            <button className="positive ui button"  onClick={handleclick}> {read ? "Remove from cart" : "Add to cart"}</button>
             </div>
         </div>
                 );
