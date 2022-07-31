@@ -1,3 +1,4 @@
+import Cartitem from "./Cartitem";
 import React from "react";
 
 function Cart() {
@@ -8,7 +9,7 @@ function Cart() {
       <tbody>
         <tr>
           <th>
-            <h3 className="ui center aligned header">Date</h3>
+            <h3 className="ui center aligned header">Title</h3>
           </th>
           <th>
             <h3 className="ui center aligned header">Description</h3>
@@ -17,10 +18,10 @@ function Cart() {
             <h3 className="ui center aligned header">Category</h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Amount</h3>
+            <h3 className="ui center aligned header">Price</h3>
           </th>
         </tr>
-       { /*we need to create a row for each transaction*/}
+       <Cartitem/>
         {/* render a list of <Transaction> components here */}
       </tbody>
     </table>
