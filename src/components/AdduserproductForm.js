@@ -6,7 +6,8 @@ function AdduserproductForm({onsubmission}) {
   function handlesubmit(e) {
 
     e.preventDefault()
-    onsubmission(newdata)
+    onsubmission(newdata);
+    setNewdata({title:"",price:0, category:"",description:""})
   }  
   
   function handlechange(e) {

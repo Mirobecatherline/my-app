@@ -1,8 +1,9 @@
 import React from "react";
-function Comment(params) {
+function Comment() {
    
    function handleclicks() {
     alert("Thanks you !")
+    
    }
    
     return(
