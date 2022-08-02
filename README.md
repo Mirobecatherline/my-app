@@ -14,10 +14,11 @@ The user can view the products in the store, filter the products, and add their 
 
 https://mirobecatherline.github.io/my-app/
 
-# Link to site video
+
+## Link to site video
 
 https://drive.google.com/file/d/1ibHzXVcX8EwGhTYYDdXRd9xMGd5mVXX2/view?usp=sharing
---
+
 ## _user story_
 ---
 * user can be able to view all product
