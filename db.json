@@ -247,6 +247,22 @@
       "description": "wone by men",
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
       "id": 21
+    },
+    {
+      "title": "women cloth",
+      "price": 0,
+      "category": "women",
+      "description": "liked by all ladies ",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      "id": 22
+    },
+    {
+      "title": "women wear",
+      "price": 0,
+      "category": "women",
+      "description": "liked by ladies of all sizes",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      "id": 23
     }
   ]
 }
